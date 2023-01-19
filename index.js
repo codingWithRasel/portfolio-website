@@ -15,7 +15,7 @@ const toggle = () => {
   },
   mql = window.matchMedia("(min-width: 768px)"),
   screenTest = (o) => {
-    o.matches && closeClick();
+    o.matches && toggle();
   };
 mql.addEventListener("change", screenTest);
 const animationSection = document.querySelector("#animation"),
