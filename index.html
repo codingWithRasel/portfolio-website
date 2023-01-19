@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="a developer portfolio here" />
+    <title>Responsive Portfolio</title>
+    <!-- css -->
+    <!-- <link rel="stylesheet" href="./dist/output.css" /> -->
+    <link rel="stylesheet" href="build.css" />
+    <!-- title bar -->
+    <link rel="icon" type="image/png" href="./images/circle-check-solid.svg" />
+    <!-- font awesome icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- slider js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script defer src="./index.js"></script>
+    <style>
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      * {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-900 text-white" id="body">
+    <header class="bg-black/90 z-50 inset-0 bottom-auto" id="header">
+      <div
+        class="container h-20 flex mx-auto px-5 justify-between items-center"
+      >
+        <a class="block shrink-0" href="#"
+          ><img class="block" src="./images/logo.webp" alt="logo"
+        /></a>
+
+        <button
+          class="tab:hidden rounded text-2xl border"
+          onclick="toggle()"
+          id="menubtn"
+        >
+          <ion-icon class="block p-1" name="menu" id="menu"></ion-icon>
+        </button>
+        <nav
+          class="fixed tab:static duration-[.4s] top-0 bottom-0 translate-x-full tab:translate-x-0 z-50 right-0 w-[70%] tab:w-auto bg-slate-800 tab:bg-transparent"
+          id="nav"
+        >
+          <ul class="tab:flex ml-5 tab:ml-0 tab:mt-0 mt-20">
+            <li class="absolute right-16 top-6">
+              <button
+                class="tab:hidden rounded text-2xl border"
+                onclick="toggle()"
+                id="closebtn"
+              >
+                <ion-icon class="block p-1" name="close" id="close"></ion-icon>
+              </button>
+            </li>
+            <li>
+              <a class="nav-links" href="#">Home</a>
+            </li>
+            <li>
+              <a class="nav-links" href="#bio-data">About</a>
+            </li>
+            <li>
+              <a class="nav-links" href="#portfolio">Portfolio</a>
+            </li>
+            <li>
+              <a class="nav-links" href="#testimonial">Services</a>
+            </li>
+            <li>
+              <a class="nav-links" href="#">Blog</a>
+            </li>
+            <li>
+              <a class="nav-links" href="#contact-us">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div
+          class="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm invisible"
+          id="overlay"
+        ></div>
+      </div>
+    </header>
+    <main>
+      <!-- =========================== -->
+      <!--              hero section -->
+      <!-- =========================== -->
+      <section
+        class="z-0 relative overflow-hidden tab:bg-h1_hero tab:min-h-[1080px] bg-cover bg-center bg-no-repeat"
+        id="hero"
+      >
+        <div class="py-[200px] container mx-auto px-7">
+          <!-- hero image -->
+          <div
+            class="-z-10 hidden tab:block absolute top-0 tab:-right-[180px] lap:-right-[130px] desk:-right-[101px]"
+          >
+            <img src="./images/hero.webp" alt="hero" />
+          </div>
+          <!-- herocontent -->
+          <div>
+            <h2
+              class="uppercase relative text-red-500 text-xl tab:text-2xl mb-6 ml-16 after:content-[''] after:absolute after:top-1/2 after:-translate-y-1/2 after:-left-16 after:h-[2px] after:w-12 after:bg-red-500"
+            >
+              Creative Web Design
+            </h2>
+            <h1
+              class="uppercase text-3xl mob:text-4xl lap:text-[50px] desk:[60px] mb-16 leading-normal tab:leading-normal w-5/6 tab:w-[70%] font-bold"
+            >
+              Web Design Make Us happy to take advantage
+            </h1>
+            <a
+              href="#portfolio"
+              class="uppercase btnShadow leading-[0] p-6 font-semibold rounded-md bg-red-500"
+            >
+              watch portfolio
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- =========================== -->
+      <!--              bio-data section -->
+      <!-- =========================== -->
+      <section
+        class="min-h-screen py-10 bg-slate-800 grid items-center"
+        id="bio-data"
+      >
+        <div
+          class="max-w-[1400px] grid items-center gap-16 px-7 mx-auto tab:grid-cols-2 z-0"
+        >
+          <!-- bio-image -->
+          <div
+            class="rounded-[10px] h-full shadow-[-15px_-10px] shadow-purple-400 overflow-hidden"
+          >
+            <img
+              class="block hover:scale-105 duration-700 h-full object-cover"
+              src="./images/biodata.webp"
+              alt="biodata"
+            />
+          </div>
+          <!-- bio-content -->
+          <div class="z-0 grid gap-6">
+            <h2 class="common mb-10 tracking-widest">My Bio-Data</h2>
+            <p class="text-justify text-lg">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt
+              dolor repellat explicabo quasi qui eligendi. Suscipit placeat
+            </p>
+            <p>Lorem ipsum dolor sit amet adipisicing elit.</p>
+            <div class="flex flex-col gap-7">
+              <div class="relative">
+                <h3 class="mb-2 uppercase text-xl font-bold">Design</h3>
+                <div class="progress after:w-[90%]">
+                  <span class="left-[calc(90%-24px)] pin">90% </span>
+                </div>
+              </div>
+              <div class="relative">
+                <h3 class="mb-2 uppercase text-xl font-bold">Html</h3>
+                <div class="progress after:w-[95%]">
+                  <span class="left-[calc(95%-24px)] pin">95% </span>
+                </div>
+              </div>
+              <div class="relative">
+                <h3 class="mb-2 uppercase text-xl font-bold">Css</h3>
+                <div class="progress after:w-[85%]">
+                  <span class="left-[calc(85%-24px)] pin">85% </span>
+                </div>
+              </div>
+              <div class="relative">
+                <h3 class="mb-2 uppercase text-xl font-bold">JavaScript</h3>
+                <div class="progress after:w-[70%]">
+                  <span class="left-[calc(70%-24px)] pin">70% </span>
+                </div>
+              </div>
+              <div class="relative">
+                <h3 class="mb-2 uppercase text-xl font-bold">Mern</h3>
+                <div class="progress after:w-[60%]">
+                  <span class="left-[calc(60%-24px)] pin">60% </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            href="#"
+            class="btnShadow tab:col-span-2 w-fit whitespace-nowrap justify-self-center px-7 py-4 rounded bg-gradient-to-r from-blue-600 font-semibold text-lg to-cyan-500"
+            download
+          >
+            Download Cv
+          </a>
+        </div>
+      </section>
+      <!-- =========================== -->
+      <!--             animation Section -->
+      <!-- =========================== -->
+      <section
+        class="py-[100px] min-h-[70vh] grid items-center bg-slate-900"
+        id="animation"
+      >
+        <div
+          class="container mx-auto grid tab:grid-cols-2 lap:grid-cols-4 gap-7 text-center text-3xl"
+        >
+          <div class="py-4">
+            <h3>Complited Project</h3>
+            <p class="text-5xl mt-4" data-target="5000">00</p>
+          </div>
+          <div class="py-4">
+            <h3>Happy Client</h3>
+            <p class="text-5xl mt-4" data-target="4500">00</p>
+          </div>
+          <div class="py-4">
+            <h3>Like</h3>
+            <p class="text-5xl mt-4" data-target="4600">00</p>
+          </div>
+          <div class="py-4">
+            <h3>Share</h3>
+            <p class="text-5xl mt-4" data-target="3500">00</p>
+          </div>
+        </div>
+      </section>
+      <!-- =========================== -->
+      <!--              portfolio Section -->
+      <!-- =========================== -->
+      <section class="py-10 bg-slate-800 min-h-screen" id="portfolio">
+        <div class="container mx-auto px-7">
+          <h2 class="common">Portfolio</h2>
+          <div class="grid gap-14">
+            <!-- button parent -->
+            <div class="grid tab:grid-cols-4 pt-10 gap-2">
+              <button class="portfolioBtn portfolioBtn-active">All</button>
+              <button class="portfolioBtn">Web Desing</button>
+              <button class="portfolioBtn">Web Development</button>
+              <button class="portfolioBtn">AI</button>
+            </div>
+            <!-- images parent -->
+            <div class="grid gap-6 tab:grid-cols-2">
+              <div class="portfolio-0 portfolio-2">
+                <div class="group">
+                  <img class="block" src="./images/d-1.webp" alt="desing" />
+                  <div class="overlay">
+                    <a href="#">Click Here to More...</a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-0 portfolio-3">
+                <div class="group h-full">
+                  <img
+                    class="block border border-red-500 h-full w-full"
+                    src="./images/ai2.webp"
+                    alt="desing"
+                  />
+                  <div class="overlay">
+                    <a href="#">Click Here to More...</a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-0 portfolio-1">
+                <div class="group">
+                  <img class="block" src="./images/desing1.webp" alt="desing" />
+                  <div class="overlay">
+                    <a href="#">Click Here to More...</a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-0 portfolio-2">
+                <div class="group">
+                  <img class="block" src="./images/d-2.webp" alt="desing" />
+                  <div class="overlay">
+                    <a href="#">Click Here to More...</a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-0 portfolio-1">
+                <div class="group">
+                  <img class="block" src="./images/desing2.webp" alt="desing" />
+                  <div class="overlay">
+                    <a href="#">Click Here to More...</a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-0 portfolio-3">
+                <div class="h-full group">
+                  <img
+                    class="block h-full w-full"
+                    src="./images/ai1.webp"
+                    alt="desing"
+                  />
+                  <div class="overlay">
+                    <a href="#">Click Here to More...</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- =========================== -->
+      <!--              Testimonial Section -->
+      <!-- =========================== -->
+      <section class="py-16" id="testimonial">
+        <div class="container mx-auto px-7">
+          <h3 class="common">Happy Client Works</h3>
+          <div class="pt-10">
+            <!-- slider -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="bg-slate-800 rounded-3xl p-7">
+                    <div class="relative mb-10">
+                      <p class="clientQuote">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quos placeat, odit animi veritatis sit tenetur ab
+                        exercitationem molestiae.
+                      </p>
+                    </div>
+                    <div class="flex gap-6">
+                      <figure>
+                        <img
+                          class="rounded-full w-16 h-16 object-cover outline outline-[7px] outline-red-500"
+                          src="./images/author1.webp"
+                          alt="author1"
+                        />
+                      </figure>
+                      <div>
+                        <p class="text-lg font-bold">Andre Russel</p>
+                        <p class="italic">Administrator</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="bg-slate-800 rounded-3xl p-7">
+                    <div class="relative mb-10">
+                      <p class="clientQuote">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quos placeat, odit animi veritatis sit tenetur ab
+                        exercitationem molestiae.
+                      </p>
+                    </div>
+                    <div class="flex gap-6">
+                      <figure>
+                        <img
+                          class="outline rounded-full w-16 h-16 object-cover outline-[7px] outline-red-500"
+                          src="./images/author2.webp"
+                          alt="author1"
+                        />
+                      </figure>
+                      <div>
+                        <p class="text-lg font-bold">Wiliams</p>
+                        <p class="italic">Engineer</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="bg-slate-800 rounded-3xl p-7">
+                    <div class="relative mb-10">
+                      <p class="clientQuote">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quos placeat, odit animi veritatis sit tenetur ab
+                        exercitationem molestiae.
+                      </p>
+                    </div>
+                    <div class="flex gap-6">
+                      <figure>
+                        <img
+                          class="rounded-full outline w-16 h-16 object-cover outline-[7px] outline-red-500"
+                          src="./images/author3.webp"
+                          alt="author1"
+                        />
+                      </figure>
+                      <div>
+                        <p class="text-lg font-bold">Mohammad Rasel</p>
+                        <p class="italic">Junior Dev.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="bg-slate-800 rounded-3xl p-7">
+                    <div class="relative mb-10">
+                      <p class="clientQuote">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quos placeat, odit animi veritatis sit tenetur ab
+                        exercitationem molestiae.
+                      </p>
+                    </div>
+                    <div class="flex gap-6">
+                      <figure>
+                        <img
+                          class="rounded-full w-16 h-16 object-cover outline outline-[7px] outline-red-500"
+                          src="./images/author4.webp"
+                          alt="author1"
+                        />
+                      </figure>
+                      <div>
+                        <p class="text-lg font-bold">Eon Bishoop</p>
+                        <p class="italic">Commentator</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- =========================== -->
+      <!--              Freelancing Section -->
+      <!-- =========================== -->
+      <section class="h-[500px] relative" id="freelancing">
+        <div
+          class="bg-paralax filter blur-md border h-full bg-top bg-no-repeat bg-fixed bg-cover"
+        ></div>
+        <div
+          class="absolute w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-10 items-center"
+        >
+          <h2 class="text-6xl leading-normal tracking-widest text-center">
+            I am
+            <span class="text-orange-500 hover:underline cursor-pointer"
+              >Availabe</span
+            >
+            for Freelancing
+          </h2>
+          <a
+            href="#"
+            class="btnShadow w-fit whitespace-nowrap px-7 tracking-wider py-4 rounded bg-gradient-to-r from-blue-600 font-semibold text-lg to-cyan-500"
+            >Hire Me</a
+          >
+        </div>
+      </section>
+      <!-- =========================== -->
+      <!--              Contact Us Section -->
+      <!-- =========================== -->
+      <section class="py-10 px-6" id="contact-us">
+        <div class="mx-auto mb-10">
+          <div class="container mx-auto mb-10">
+            <h3 class="common">Contact Us</h3>
+          </div>
+          <iframe
+            class="w-full rounded-md"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1789.1348834213693!2d90.28953214657162!3d23.98927513996851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755e78bc04abb8b%3A0x6425718bdce14619!2sKashimpur!5e0!3m2!1sen!2sbd!4v1673880771686!5m2!1sen!2sbd"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="tab:max-w-[1000px] mx-auto">
+          <!-- Contact form-->
+          <form action="#">
+            <div class="grid gap-5 text-slate-800">
+              <div class="grid tab:grid-cols-2 gap-5">
+                <div>
+                  <label for="username"></label>
+                  <input
+                    class="w-full p-2 text-lg outline-none rounded"
+                    type="text"
+                    name="username"
+                    id="username"
+                    placeholder="Username"
+                  />
+                </div>
+                <div>
+                  <label for="password"></label>
+                  <input
+                    class="w-full p-2 text-lg outline-none rounded"
+                    type="password"
+                    name="pass"
+                    id="pass"
+                    placeholder="Password"
+                  />
+                </div>
+              </div>
+              <div>
+                <input
+                  class="w-full p-2 text-lg outline-none rounded"
+                  type="text"
+                  name="subject"
+                  id="subject"
+                  placeholder="Subject"
+                />
+              </div>
+              <div>
+                <textarea
+                  class="w-full min-h-[100px] max-h-[150px] p-2 text-lg outline-none rounded"
+                  name="textarea"
+                  id="textarea"
+                  placeholder="Message here..."
+                ></textarea>
+              </div>
+              <div>
+                <input
+                  class="uppercase btnShadow leading-[0] p-6 font-semibold rounded-md bg-red-500"
+                  type="submit"
+                  value="Send message"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="py-10" id="footer">
+      <div class="mx-auto max-w-[1400px] px-7 text-slate-400">
+        <div class="grid tab:grid-cols-4 gap-8">
+          <!-- about div -->
+          <div>
+            <h3 class="font-semibold text-lg mb-4 text-slate-50">About</h3>
+            <p class="max-w-[360px] tracking-wider text-justify">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi
+              esse ea voluptates ducimus, nihil ut dolorum mollitia neque.
+            </p>
+          </div>
+          <!-- links and Categories -->
+          <div class="tab:col-span-2 gap-5 grid grid-cols-2">
+            <!-- links div -->
+            <div>
+              <h3 class="font-semibold text-lg mb-4 text-slate-50">Links</h3>
+              <ul class="font-medium grid gap-2">
+                <li class="footerList group">
+                  <span
+                    ><i
+                      class="group-hover:translate-x-1 duration-200 fa-solid fa-arrow-right"
+                    ></i></span
+                  ><a class="ml-4" href="#">Home</a>
+                </li>
+                <li class="footerList group">
+                  <span
+                    ><i
+                      class="group-hover:translate-x-1 duration-200 fa-solid fa-arrow-right"
+                    ></i></span
+                  ><a class="ml-4" href="#">About</a>
+                </li>
+                <li class="footerList group">
+                  <span
+                    ><i
+                      class="group-hover:translate-x-1 duration-200 fa-solid fa-arrow-right"
+                    ></i></span
+                  ><a class="ml-4" href="#">Services</a>
+                </li>
+                <li class="footerList group">
+                  <span
+                    ><i
+                      class="group-hover:translate-x-1 duration-200 fa-solid fa-arrow-right"
+                    ></i></span
+                  ><a class="ml-4" href="#">Portfolio</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Categories div -->
+            <div>
+              <h3 class="font-semibold text-lg mb-4 text-slate-50">
+                Categories
+              </h3>
+              <ul class="font-medium grid gap-2">
+                <li class="footerList group">
+                  <span
+                    ><i
+                      class="group-hover:translate-x-1 duration-200 fa-solid fa-arrow-right"
+                    ></i></span
+                  ><a class="ml-4" href="#">Web Desing</a>
+                </li>
+                <li class="footerList group">
+                  <span
+                    ><i
+                      class="group-hover:translate-x-1 duration-200 fa-solid fa-arrow-right"
+                    ></i></span
+                  ><a class="ml-4 whitespace-nowrap" href="#">Web Dev.</a>
+                </li>
+                <li class="footerList group">
+                  <span
+                    ><i
+                      class="group-hover:translate-x-1 duration-200 fa-solid fa-arrow-right"
+                    ></i></span
+                  ><a class="ml-4" href="#">Mern Project</a>
+                </li>
+                <li class="footerList group">
+                  <span
+                    ><i
+                      class="group-hover:translate-x-1 duration-200 fa-solid fa-arrow-right"
+                    ></i></span
+                  ><a class="ml-4" href="#">Online Classes</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- question -->
+          <div>
+            <h3 class="font-semibold text-lg mb-4 text-slate-50">
+              Have a Question?
+            </h3>
+            <ul class="font-medium grid gap-2">
+              <li class="footerList group">
+                <span>
+                  <i
+                    class="fa-solid fa-location-dot group-hover:scale-[1.20] duration-200"
+                  ></i> </span
+                ><a class="ml-4" href="#">Location</a>
+              </li>
+              <li class="footerList group">
+                <span
+                  ><i
+                    class="fa-solid fa-phone-volume group-hover:scale-[1.20] duration-200"
+                  ></i></span
+                ><a class="ml-4" href="tel:+880123456789">Phone</a>
+              </li>
+              <li class="footerList group">
+                <span
+                  ><i
+                    class="fa-solid fa-envelope group-hover:scale-[1.20] duration-200"
+                  ></i></span
+                ><a
+                  class="ml-4"
+                  href="mailto:raselhossain@gmail.com"
+                  target="_blank"
+                  >mail to me</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mx-auto my-8">
+          <ul class="flex justify-center items-center gap-5 text-2xl">
+            <li>
+              <a href="#"
+                ><i
+                  class="hover:scale-105 hover:text-slate-200 duration-300 rounded-full fa-brands fa-facebook"
+                ></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"
+                ><i
+                  class="hover:scale-105 hover:text-slate-200 duration-300 fa-brands fa-instagram"
+                ></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"
+                ><i
+                  class="hover:scale-105 hover:text-slate-200 duration-300 fa-brands fa-youtube"
+                ></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="container mx-auto text-center text-lg">
+          <p>
+            Copyright &copy;2023 All rights reserved | This Website made by
+            Rasel Hossain.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <button
+      class="p-[3px] z-50 rounded-full hidden bg-gradient-to-t from-blue-400 hover:scale-110 duration-300 to-purple-500 fixed bottom-5 animate-[slideup_.5s] right-5"
+      id="toTop"
+    >
+      <ion-icon class="block text-4xl" name="arrow-round-up"></ion-icon>
+    </button>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 40,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          // when window width is >= 320px
+
+          // when window width is >= 768px
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
+</html>
