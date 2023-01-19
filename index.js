@@ -64,3 +64,22 @@ window.addEventListener("scroll", () => {
   toTop.addEventListener("click", () => {
     header.scrollIntoView({ behavior: "smooth" });
   });
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 40,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});

@@ -50,7 +50,7 @@
           onclick="toggle()"
           id="menubtn"
         >
-          <ion-icon class="block p-1" name="menu" id="menu"></ion-icon>
+          <i class="fa-solid fa-bars p-1" name="menu" id="menu"></i>
         </button>
         <nav
           class="fixed tab:static duration-[.4s] top-0 bottom-0 translate-x-full tab:translate-x-0 z-50 right-0 w-[70%] tab:w-auto bg-slate-800 tab:bg-transparent"
@@ -59,11 +59,15 @@
           <ul class="tab:flex ml-5 tab:ml-0 tab:mt-0 mt-20">
             <li class="absolute right-16 top-6">
               <button
-                class="tab:hidden rounded text-2xl border"
+                class="tab:hidden rounded text-2xl border leading-none"
                 onclick="toggle()"
                 id="closebtn"
               >
-                <ion-icon class="block p-1" name="close" id="close"></ion-icon>
+                <i
+                  class="fa-solid fa-xmark py-1 px-2"
+                  name="close"
+                  id="close"
+                ></i>
               </button>
             </li>
             <li>
@@ -452,6 +456,7 @@
             height="450"
             style="border: 0"
             allowfullscreen=""
+            title="mylocation"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
@@ -633,21 +638,21 @@
         <div class="mx-auto my-8">
           <ul class="flex justify-center items-center gap-5 text-2xl">
             <li>
-              <a href="#"
+              <a href="#" title="facebook"
                 ><i
                   class="hover:scale-105 hover:text-slate-200 duration-300 rounded-full fa-brands fa-facebook"
                 ></i
               ></a>
             </li>
             <li>
-              <a href="#"
+              <a href="#" title="instra"
                 ><i
                   class="hover:scale-105 hover:text-slate-200 duration-300 fa-brands fa-instagram"
                 ></i
               ></a>
             </li>
             <li>
-              <a href="#"
+              <a href="#" title="youtube"
                 ><i
                   class="hover:scale-105 hover:text-slate-200 duration-300 fa-brands fa-youtube"
                 ></i
@@ -664,35 +669,12 @@
       </div>
     </footer>
     <button
-      class="p-[3px] z-50 rounded-full hidden bg-gradient-to-t from-blue-400 hover:scale-110 duration-300 to-purple-500 fixed bottom-5 animate-[slideup_.5s] right-5"
+      class="h-10 w-10 z-50 rounded-full hidden bg-gradient-to-t from-blue-400 hover:scale-110 duration-300 to-purple-500 fixed bottom-5 animate-[slideup_.5s] right-5"
       id="toTop"
     >
-      <ion-icon class="block text-4xl" name="arrow-round-up"></ion-icon>
+      <i class="fa-solid fa-arrow-up text-3xl"></i>
     </button>
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 40,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        breakpoints: {
-          // when window width is >= 320px
-
-          // when window width is >= 768px
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 40,
-          },
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-    </script>
+    <script></script>
   </body>
 </html>
